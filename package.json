@@ -1,0 +1,30 @@
+{
+  "name": "chrome-typescript-boilerplate",
+  "version": "0.0.1",
+  "description": "Development environment TypeScript + Preact for Chrome Extensions",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx spack",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "chrome",
+    "extension",
+    "typescript",
+    "boilerplate",
+    "starter"
+  ],
+  "author": "Alex Gompper",
+  "license": "MIT",
+  "devDependencies": {
+    "@swc/cli": "^0.1.62",
+    "@swc/core": "^1.3.68",
+    "@types/chrome": "^0.0.240",
+    "chokidar": "^3.5.3",
+    "prettier": "^3.0.0",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "preact": "^10.15.1"
+  }
+}
