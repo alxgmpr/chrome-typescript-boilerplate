@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx spack",
-    "format": "prettier --write ."
+    "format": "npx prettier --write ."
   },
   "keywords": [
     "chrome",
