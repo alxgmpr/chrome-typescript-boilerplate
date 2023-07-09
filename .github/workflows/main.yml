@@ -22,4 +22,4 @@ jobs:
       - name: Format check
         run: pnpm format:check
       - name: Build
-        run: pnpm build
+        run: RUST_BACKTRACE=1 pnpm build
