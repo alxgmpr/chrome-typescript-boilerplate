@@ -1,1 +1,1 @@
-console.log("bg!");
+var pageData;chrome.runtime.onMessage.addListener(function(request,sender,sendResponse){if(request.cmd==="pageData")pageData=request.data});chrome.runtime.onConnect.addListener(function(port){console.assert(port.name=="popup");port.onMessage.addListener(function(msg){if(msg.cmd=="getPageData")port.postMessage({cmd:"pageData",data:pageData})})});
