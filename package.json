@@ -27,5 +27,8 @@
   },
   "dependencies": {
     "preact": "^10.15.1"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
