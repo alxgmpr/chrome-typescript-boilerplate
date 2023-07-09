@@ -9,16 +9,17 @@ jobs:
         node-version: [18]
     steps:
     - uses: actions/checkout@v3
-    - uses: pnpm/action-setup@v2
-      with:
-        version: latest
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: latest
     - name: Install dependencies
       run: pnpm install
-    - name: Lint
-      run: npx prettier . --check
+    - name: Format check
+      run: pnpm format:check
     - name: Build
-      run: npx spack
+      run: pnpm build
