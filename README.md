@@ -15,11 +15,11 @@ pnpm install
 ```
 
 ```shell
-pnpm run build # or just `spack`
+pnpm run build
 ```
 
 ### Fancy Features
 
-- SWC for fast compilation and bundling
+- esbuild for fast compilation and bundling
 - Preact for tiny + fast UX with React tendencies
 - Chrome manifest v3 to stick with the times
