@@ -1,1 +1,1 @@
-"use strict";let pageData;chrome.runtime.onMessage.addListener(a=>{a.cmd==="pageData"&&(pageData=a.data)}),chrome.runtime.onConnect.addListener(a=>{console.assert(a.name=="popup"),a.onMessage.addListener(e=>{e.cmd=="getPageData"&&a.postMessage({cmd:"pageData",data:pageData})})});
+"use strict";(()=>{var e;chrome.runtime.onMessage.addListener(a=>{a.cmd==="pageData"&&(e=a.data)});chrome.runtime.onConnect.addListener(a=>{console.assert(a.name=="popup"),a.onMessage.addListener(n=>{n.cmd=="getPageData"&&a.postMessage({cmd:"pageData",data:e})})});})();

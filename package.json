@@ -4,12 +4,9 @@
   "description": "Development environment TypeScript + Preact for Chrome Extensions",
   "main": "index.js",
   "scripts": {
-    "build": "pnpm run build:background && pnpm run build:content && pnpm run build:popup",
+    "build": "node build.mjs",
     "format": "npx prettier --write .",
-    "format:check": "npx prettier --check .",
-    "build:background": "esbuild src/background.ts --outfile=dist/background.js --minify",
-    "build:content": "esbuild src/contentScript.ts --outfile=dist/contentScript.js --minify",
-    "build:popup": "esbuild src/popup.tsx --outfile=dist/popup.js --minify"
+    "format:check": "npx prettier --check ."
   },
   "keywords": [
     "chrome",
